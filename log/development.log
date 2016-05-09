@@ -1,0 +1,424 @@
+
+
+Started GET "/" for ::1 at 2016-05-09 16:31:24 -0400
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.0) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.0) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.0) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/apprentice/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.1.0/lib/web_console/templates/_markup.html (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.1.0/lib/web_console/templates/style.css within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.1.0/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.1.0/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.1.0/lib/web_console/templates/console.js within layouts/javascript (75.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.1.0/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.1.0/lib/web_console/templates/error_page.js within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.1.0/lib/web_console/templates/index.html (168.8ms)
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "tweets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "content" varchar, "avatar_url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150302213951')
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "tweets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "content" varchar, "avatar_url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150302213951')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@marques.schinner"], ["content", "Adipisci omnis aut ipsum laboriosam consequatur voluptatem voluptas. Sunt corporis consequatur eos alias."], ["created_at", "2016-05-09 20:31:41.134808"], ["updated_at", "2016-05-09 20:31:41.134808"], ["avatar_url", "http://robohash.org/@marques.schinner.png?size=50x50"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@elda"], ["content", "Eos repellat perspiciatis. Accusantium quia temporibus non tempore eos."], ["created_at", "2016-05-09 20:31:41.140948"], ["updated_at", "2016-05-09 20:31:41.140948"], ["avatar_url", "http://robohash.org/@elda.png?size=50x50"]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@citlalli_kulas"], ["content", "Cumque distinctio molestias atque. Ut voluptas dolores quibusdam rerum quis nostrum impedit."], ["created_at", "2016-05-09 20:31:41.145803"], ["updated_at", "2016-05-09 20:31:41.145803"], ["avatar_url", "http://robohash.org/@citlalli_kulas.png?size=50x50"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@lexus.stark"], ["content", "Consequatur sed voluptates. Sunt quibusdam tempore."], ["created_at", "2016-05-09 20:31:41.148606"], ["updated_at", "2016-05-09 20:31:41.148606"], ["avatar_url", "http://robohash.org/@lexus.stark.png?size=50x50"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@hobart.goodwin"], ["content", "Distinctio amet aut ut maiores beatae. Aut dolorem dignissimos illo totam."], ["created_at", "2016-05-09 20:31:41.151746"], ["updated_at", "2016-05-09 20:31:41.151746"], ["avatar_url", "http://robohash.org/@hobart.goodwin.png?size=50x50"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@annalise"], ["content", "Excepturi nisi et. Odio quibusdam soluta at sit quae non non."], ["created_at", "2016-05-09 20:31:41.154421"], ["updated_at", "2016-05-09 20:31:41.154421"], ["avatar_url", "http://robohash.org/@annalise.png?size=50x50"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@robyn_boyer"], ["content", "Qui nisi vel consequatur velit quis ratione. Temporibus non eligendi."], ["created_at", "2016-05-09 20:31:41.157186"], ["updated_at", "2016-05-09 20:31:41.157186"], ["avatar_url", "http://robohash.org/@robyn_boyer.png?size=50x50"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@alexzander_heaney"], ["content", "Aliquam vitae ut magni porro. Debitis non blanditiis qui laudantium optio nihil m"], ["created_at", "2016-05-09 20:31:41.160047"], ["updated_at", "2016-05-09 20:31:41.160047"], ["avatar_url", "http://robohash.org/@alexzander_heaney.png?size=50x50"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@jude_terry"], ["content", "Pariatur nemo enim. Eos nemo nulla."], ["created_at", "2016-05-09 20:31:41.163066"], ["updated_at", "2016-05-09 20:31:41.163066"], ["avatar_url", "http://robohash.org/@jude_terry.png?size=50x50"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@kory"], ["content", "Deleniti exercitationem et quidem. Quia deserunt consequuntur qui ut."], ["created_at", "2016-05-09 20:31:41.165812"], ["updated_at", "2016-05-09 20:31:41.165812"], ["avatar_url", "http://robohash.org/@kory.png?size=50x50"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@johnson"], ["content", "Eum voluptatem asperiores dolor. Mollitia error et est nobis omnis aliquid vitae."], ["created_at", "2016-05-09 20:31:41.168553"], ["updated_at", "2016-05-09 20:31:41.168553"], ["avatar_url", "http://robohash.org/@johnson.png?size=50x50"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@reta.grady"], ["content", "Aut nam aliquid rerum et ut. Voluptatem dignissimos qui velit repellendus iure unde."], ["created_at", "2016-05-09 20:31:41.179057"], ["updated_at", "2016-05-09 20:31:41.179057"], ["avatar_url", "http://robohash.org/@reta.grady.png?size=50x50"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@dejon"], ["content", "Animi qui error quis odit dolores laudantium. Eligendi aperiam itaque ut."], ["created_at", "2016-05-09 20:31:41.182872"], ["updated_at", "2016-05-09 20:31:41.182872"], ["avatar_url", "http://robohash.org/@dejon.png?size=50x50"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@tommie_jacobson"], ["content", "Iste fugiat harum qui fuga ea delectus in. Aperiam qui aut fuga velit impedit nihil aut"], ["created_at", "2016-05-09 20:31:41.186294"], ["updated_at", "2016-05-09 20:31:41.186294"], ["avatar_url", "http://robohash.org/@tommie_jacobson.png?size=50x50"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@pedro_brown"], ["content", "Neque aut quis labore nam quibusdam eveniet. Delectus earum asperiores."], ["created_at", "2016-05-09 20:31:41.189353"], ["updated_at", "2016-05-09 20:31:41.189353"], ["avatar_url", "http://robohash.org/@pedro_brown.png?size=50x50"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@charity"], ["content", "Dolorem sed quas praesentium corporis esse voluptatibus unde. Rem maxime fugiat nihil saepe pariatur."], ["created_at", "2016-05-09 20:31:41.192359"], ["updated_at", "2016-05-09 20:31:41.192359"], ["avatar_url", "http://robohash.org/@charity.png?size=50x50"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@landen"], ["content", "Asperiores laborum odit ipsum eveniet quaerat error nesciunt. Ipsam quaerat commo"], ["created_at", "2016-05-09 20:31:41.195204"], ["updated_at", "2016-05-09 20:31:41.195204"], ["avatar_url", "http://robohash.org/@landen.png?size=50x50"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@milton"], ["content", "Rerum tenetur ab et ut vel soluta. Est numquam cupiditate occaecati."], ["created_at", "2016-05-09 20:31:41.198365"], ["updated_at", "2016-05-09 20:31:41.198365"], ["avatar_url", "http://robohash.org/@milton.png?size=50x50"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@giovanny"], ["content", "Fugiat et vel id et ut. Rerum excepturi velit consequatur aut cum est."], ["created_at", "2016-05-09 20:31:41.201508"], ["updated_at", "2016-05-09 20:31:41.201508"], ["avatar_url", "http://robohash.org/@giovanny.png?size=50x50"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@nyah_roberts"], ["content", "Tenetur odit qui sit provident officia. Vitae et ut quod vel vel nesciunt."], ["created_at", "2016-05-09 20:31:41.204602"], ["updated_at", "2016-05-09 20:31:41.204602"], ["avatar_url", "http://robohash.org/@nyah_roberts.png?size=50x50"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@evie.trantow"], ["content", "Reprehenderit debitis vel quas autem ab qui tenetur. Ut consectetur id ad."], ["created_at", "2016-05-09 20:31:41.207594"], ["updated_at", "2016-05-09 20:31:41.207594"], ["avatar_url", "http://robohash.org/@evie.trantow.png?size=50x50"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@marianne.marks"], ["content", "Ducimus est animi fuga rerum molestiae pariatur ea. Inventore rerum perferendis itaque distinct"], ["created_at", "2016-05-09 20:31:41.210595"], ["updated_at", "2016-05-09 20:31:41.210595"], ["avatar_url", "http://robohash.org/@marianne.marks.png?size=50x50"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@ericka"], ["content", "Id ut esse sapiente illum cum saepe. Dicta ex culpa."], ["created_at", "2016-05-09 20:31:41.213708"], ["updated_at", "2016-05-09 20:31:41.213708"], ["avatar_url", "http://robohash.org/@ericka.png?size=50x50"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@julian.hand"], ["content", "Autem laboriosam sit. Et qui sint."], ["created_at", "2016-05-09 20:31:41.217193"], ["updated_at", "2016-05-09 20:31:41.217193"], ["avatar_url", "http://robohash.org/@julian.hand.png?size=50x50"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@casimer.johns"], ["content", "Sequi explicabo est magnam. Et enim minus dolorem qui."], ["created_at", "2016-05-09 20:31:41.220408"], ["updated_at", "2016-05-09 20:31:41.220408"], ["avatar_url", "http://robohash.org/@casimer.johns.png?size=50x50"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@edison"], ["content", "Ullam consequatur ipsam. Beatae est et."], ["created_at", "2016-05-09 20:31:41.223896"], ["updated_at", "2016-05-09 20:31:41.223896"], ["avatar_url", "http://robohash.org/@edison.png?size=50x50"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@dorian_shanahan"], ["content", "Eos omnis molestiae aspernatur sunt reiciendis. Laboriosam eaque in porro nam possimus."], ["created_at", "2016-05-09 20:31:41.227322"], ["updated_at", "2016-05-09 20:31:41.227322"], ["avatar_url", "http://robohash.org/@dorian_shanahan.png?size=50x50"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@nelson.ortiz"], ["content", "Occaecati voluptatem alias et voluptas asperiores id. Explicabo id minima unde."], ["created_at", "2016-05-09 20:31:41.231091"], ["updated_at", "2016-05-09 20:31:41.231091"], ["avatar_url", "http://robohash.org/@nelson.ortiz.png?size=50x50"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@shanon.greenfelder"], ["content", "Deserunt sequi libero at amet unde. Fugiat et rerum qui cum."], ["created_at", "2016-05-09 20:31:41.234175"], ["updated_at", "2016-05-09 20:31:41.234175"], ["avatar_url", "http://robohash.org/@shanon.greenfelder.png?size=50x50"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@dennis"], ["content", "Dolores deleniti ullam ab non. Sit dolorem officiis."], ["created_at", "2016-05-09 20:31:41.237497"], ["updated_at", "2016-05-09 20:31:41.237497"], ["avatar_url", "http://robohash.org/@dennis.png?size=50x50"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@hans.kaulke"], ["content", "Praesentium dolor vel. Et quidem praesentium reprehenderit consequatur sunt."], ["created_at", "2016-05-09 20:31:41.241569"], ["updated_at", "2016-05-09 20:31:41.241569"], ["avatar_url", "http://robohash.org/@hans.kaulke.png?size=50x50"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@markus"], ["content", "Quaerat voluptates explicabo consequuntur. Veniam cumque aut."], ["created_at", "2016-05-09 20:31:41.244613"], ["updated_at", "2016-05-09 20:31:41.244613"], ["avatar_url", "http://robohash.org/@markus.png?size=50x50"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@marty.abbott"], ["content", "Ut adipisci reiciendis modi aperiam aut exercitationem. Tempore quis animi."], ["created_at", "2016-05-09 20:31:41.247896"], ["updated_at", "2016-05-09 20:31:41.247896"], ["avatar_url", "http://robohash.org/@marty.abbott.png?size=50x50"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@stella"], ["content", "Dicta esse tempora ducimus est. Voluptas maiores nisi est aut distinctio nihil."], ["created_at", "2016-05-09 20:31:41.251025"], ["updated_at", "2016-05-09 20:31:41.251025"], ["avatar_url", "http://robohash.org/@stella.png?size=50x50"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@elvis"], ["content", "Pariatur quibusdam illo tempore. Itaque eligendi natus quidem dolor facere."], ["created_at", "2016-05-09 20:31:41.254847"], ["updated_at", "2016-05-09 20:31:41.254847"], ["avatar_url", "http://robohash.org/@elvis.png?size=50x50"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@jo"], ["content", "Qui perferendis nostrum. Qui deserunt expedita doloribus."], ["created_at", "2016-05-09 20:31:41.257719"], ["updated_at", "2016-05-09 20:31:41.257719"], ["avatar_url", "http://robohash.org/@jo.png?size=50x50"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@caesar.kunde"], ["content", "Modi facere et sunt. Placeat accusamus dolorem dicta."], ["created_at", "2016-05-09 20:31:41.260937"], ["updated_at", "2016-05-09 20:31:41.260937"], ["avatar_url", "http://robohash.org/@caesar.kunde.png?size=50x50"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@serenity"], ["content", "Voluptas nihil quisquam. Minima dolores in quas et perspiciatis."], ["created_at", "2016-05-09 20:31:41.263918"], ["updated_at", "2016-05-09 20:31:41.263918"], ["avatar_url", "http://robohash.org/@serenity.png?size=50x50"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@kris"], ["content", "Ut enim qui iure quo. Rem rerum impedit necessitatibus."], ["created_at", "2016-05-09 20:31:41.267029"], ["updated_at", "2016-05-09 20:31:41.267029"], ["avatar_url", "http://robohash.org/@kris.png?size=50x50"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@raven_bauch"], ["content", "Natus vero ea fugit. Nostrum ea quam sit qui."], ["created_at", "2016-05-09 20:31:41.270144"], ["updated_at", "2016-05-09 20:31:41.270144"], ["avatar_url", "http://robohash.org/@raven_bauch.png?size=50x50"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@marty_schuster"], ["content", "Minima velit iste non dolores a. Cumque consequatur praesentium sint asperiores vero."], ["created_at", "2016-05-09 20:31:41.273350"], ["updated_at", "2016-05-09 20:31:41.273350"], ["avatar_url", "http://robohash.org/@marty_schuster.png?size=50x50"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@terry_watsica"], ["content", "Aut voluptates excepturi. Quo nobis illum voluptatibus molestiae inventore itaque."], ["created_at", "2016-05-09 20:31:41.277541"], ["updated_at", "2016-05-09 20:31:41.277541"], ["avatar_url", "http://robohash.org/@terry_watsica.png?size=50x50"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@gilda"], ["content", "A omnis delectus totam quisquam consequatur distinctio itaque. Rerum doloribus quisquam at."], ["created_at", "2016-05-09 20:31:41.280803"], ["updated_at", "2016-05-09 20:31:41.280803"], ["avatar_url", "http://robohash.org/@gilda.png?size=50x50"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@henri"], ["content", "Debitis sunt iusto. Id quis eum."], ["created_at", "2016-05-09 20:31:41.283995"], ["updated_at", "2016-05-09 20:31:41.283995"], ["avatar_url", "http://robohash.org/@henri.png?size=50x50"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@will.harris"], ["content", "Suscipit omnis deleniti totam. Iusto qui amet omnis."], ["created_at", "2016-05-09 20:31:41.287774"], ["updated_at", "2016-05-09 20:31:41.287774"], ["avatar_url", "http://robohash.org/@will.harris.png?size=50x50"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@lila_reichel"], ["content", "Maiores architecto sunt. Neque sapiente recusandae et aut laborum blanditiis."], ["created_at", "2016-05-09 20:31:41.291192"], ["updated_at", "2016-05-09 20:31:41.291192"], ["avatar_url", "http://robohash.org/@lila_reichel.png?size=50x50"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@serenity_kuhn"], ["content", "Earum libero cumque nam labore. Omnis et recusandae delectus aut temporibus ad."], ["created_at", "2016-05-09 20:31:41.294502"], ["updated_at", "2016-05-09 20:31:41.294502"], ["avatar_url", "http://robohash.org/@serenity_kuhn.png?size=50x50"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@mabel"], ["content", "Sit ducimus qui est similique. Excepturi ea rerum suscipit quo atque veritatis temporibus."], ["created_at", "2016-05-09 20:31:41.297757"], ["updated_at", "2016-05-09 20:31:41.297757"], ["avatar_url", "http://robohash.org/@mabel.png?size=50x50"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@carmine"], ["content", "Dignissimos et quas similique unde. Repudiandae adipisci deserunt beatae amet quo soluta sit."], ["created_at", "2016-05-09 20:31:41.301791"], ["updated_at", "2016-05-09 20:31:41.301791"], ["avatar_url", "http://robohash.org/@carmine.png?size=50x50"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@vivienne.bogisich"], ["content", "Exercitationem dignissimos sunt inventore nulla dolor. Officiis beatae ea omnis."], ["created_at", "2016-05-09 20:31:41.305373"], ["updated_at", "2016-05-09 20:31:41.305373"], ["avatar_url", "http://robohash.org/@vivienne.bogisich.png?size=50x50"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@romaine"], ["content", "Voluptatibus reiciendis vel. Voluptatem amet qui consequatur harum et perspiciatis."], ["created_at", "2016-05-09 20:31:41.308525"], ["updated_at", "2016-05-09 20:31:41.308525"], ["avatar_url", "http://robohash.org/@romaine.png?size=50x50"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@katlynn_cummerata"], ["content", "Est provident sint. Occaecati est aut expedita eos repellendus ut."], ["created_at", "2016-05-09 20:31:41.312054"], ["updated_at", "2016-05-09 20:31:41.312054"], ["avatar_url", "http://robohash.org/@katlynn_cummerata.png?size=50x50"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@erika"], ["content", "Porro et sit. Aut id animi temporibus dolor rem."], ["created_at", "2016-05-09 20:31:41.315069"], ["updated_at", "2016-05-09 20:31:41.315069"], ["avatar_url", "http://robohash.org/@erika.png?size=50x50"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@conner.mckenzie"], ["content", "Assumenda ratione eum. Recusandae in sapiente voluptas quisquam."], ["created_at", "2016-05-09 20:31:41.319442"], ["updated_at", "2016-05-09 20:31:41.319442"], ["avatar_url", "http://robohash.org/@conner.mckenzie.png?size=50x50"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@darren"], ["content", "Vitae expedita adipisci. Non unde impedit distinctio enim inventore veniam."], ["created_at", "2016-05-09 20:31:41.322735"], ["updated_at", "2016-05-09 20:31:41.322735"], ["avatar_url", "http://robohash.org/@darren.png?size=50x50"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@braden_auer"], ["content", "Distinctio sit est quis pariatur qui molestiae porro. Placeat est nulla sed dicta et reprehenderit."], ["created_at", "2016-05-09 20:31:41.325712"], ["updated_at", "2016-05-09 20:31:41.325712"], ["avatar_url", "http://robohash.org/@braden_auer.png?size=50x50"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@merl.larson"], ["content", "Rerum aut officia incidunt dignissimos in. Qui eaque libero rem amet omnis."], ["created_at", "2016-05-09 20:31:41.328953"], ["updated_at", "2016-05-09 20:31:41.328953"], ["avatar_url", "http://robohash.org/@merl.larson.png?size=50x50"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@louisa"], ["content", "Aperiam non error aspernatur aut cum eum. Beatae quis soluta animi labore exercitationem at rerum."], ["created_at", "2016-05-09 20:31:41.332157"], ["updated_at", "2016-05-09 20:31:41.332157"], ["avatar_url", "http://robohash.org/@louisa.png?size=50x50"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@maida_becker"], ["content", "Id ut nam aperiam corporis. Dolores et excepturi eos dicta."], ["created_at", "2016-05-09 20:31:41.335068"], ["updated_at", "2016-05-09 20:31:41.335068"], ["avatar_url", "http://robohash.org/@maida_becker.png?size=50x50"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@hector.ernser"], ["content", "Doloremque praesentium est quod provident commodi et. Quasi fugit et occaecati dolores voluptatem"], ["created_at", "2016-05-09 20:31:41.337900"], ["updated_at", "2016-05-09 20:31:41.337900"], ["avatar_url", "http://robohash.org/@hector.ernser.png?size=50x50"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@otho_wilderman"], ["content", "In eveniet et ut distinctio delectus id. Et quia est veritatis."], ["created_at", "2016-05-09 20:31:41.341205"], ["updated_at", "2016-05-09 20:31:41.341205"], ["avatar_url", "http://robohash.org/@otho_wilderman.png?size=50x50"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@josefina"], ["content", "Consequatur quo laborum voluptatibus praesentium. Nam dolorum et non ipsam ratione."], ["created_at", "2016-05-09 20:31:41.344615"], ["updated_at", "2016-05-09 20:31:41.344615"], ["avatar_url", "http://robohash.org/@josefina.png?size=50x50"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@zola"], ["content", "Consequatur aut sit similique. Officiis ea dolor ullam voluptas nemo provident."], ["created_at", "2016-05-09 20:31:41.347550"], ["updated_at", "2016-05-09 20:31:41.347550"], ["avatar_url", "http://robohash.org/@zola.png?size=50x50"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@theodora.bode"], ["content", "Voluptatem quidem dolores delectus. Aut occaecati autem sapiente."], ["created_at", "2016-05-09 20:31:41.350448"], ["updated_at", "2016-05-09 20:31:41.350448"], ["avatar_url", "http://robohash.org/@theodora.bode.png?size=50x50"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@eliza_lebsack"], ["content", "Quae quia accusantium ea. Voluptas at corrupti."], ["created_at", "2016-05-09 20:31:41.353819"], ["updated_at", "2016-05-09 20:31:41.353819"], ["avatar_url", "http://robohash.org/@eliza_lebsack.png?size=50x50"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@claudia"], ["content", "Deserunt facilis soluta harum. Odit sit nobis temporibus ipsa."], ["created_at", "2016-05-09 20:31:41.357190"], ["updated_at", "2016-05-09 20:31:41.357190"], ["avatar_url", "http://robohash.org/@claudia.png?size=50x50"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@logan.schinner"], ["content", "Non veniam quisquam. Blanditiis est similique fugit molestiae."], ["created_at", "2016-05-09 20:31:41.360844"], ["updated_at", "2016-05-09 20:31:41.360844"], ["avatar_url", "http://robohash.org/@logan.schinner.png?size=50x50"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@ella_cronin"], ["content", "Doloremque vitae nam eum et adipisci. Ratione saepe quia corrupti vel aut."], ["created_at", "2016-05-09 20:31:41.364415"], ["updated_at", "2016-05-09 20:31:41.364415"], ["avatar_url", "http://robohash.org/@ella_cronin.png?size=50x50"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@tyra"], ["content", "Aspernatur recusandae autem. Iste cupiditate suscipit laudantium et et."], ["created_at", "2016-05-09 20:31:41.367834"], ["updated_at", "2016-05-09 20:31:41.367834"], ["avatar_url", "http://robohash.org/@tyra.png?size=50x50"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@ova"], ["content", "Hic ea ut. Laborum mollitia impedit nobis voluptatem architecto."], ["created_at", "2016-05-09 20:31:41.370793"], ["updated_at", "2016-05-09 20:31:41.370793"], ["avatar_url", "http://robohash.org/@ova.png?size=50x50"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@sylvia"], ["content", "Vero sunt autem voluptate consequatur eos repudiandae iure. Ut nihil dolores nihil."], ["created_at", "2016-05-09 20:31:41.375685"], ["updated_at", "2016-05-09 20:31:41.375685"], ["avatar_url", "http://robohash.org/@sylvia.png?size=50x50"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@mollie"], ["content", "Tempora sit et nulla placeat. Id et omnis est."], ["created_at", "2016-05-09 20:31:41.378973"], ["updated_at", "2016-05-09 20:31:41.378973"], ["avatar_url", "http://robohash.org/@mollie.png?size=50x50"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@kenya"], ["content", "Voluptatem facere ab qui expedita consequatur. Sequi et animi repellat et vitae reprehend"], ["created_at", "2016-05-09 20:31:41.382419"], ["updated_at", "2016-05-09 20:31:41.382419"], ["avatar_url", "http://robohash.org/@kenya.png?size=50x50"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@nyasia_fritsch"], ["content", "Delectus perferendis cum iusto ullam. Consequatur rerum ut temporibus harum molestiae."], ["created_at", "2016-05-09 20:31:41.385663"], ["updated_at", "2016-05-09 20:31:41.385663"], ["avatar_url", "http://robohash.org/@nyasia_fritsch.png?size=50x50"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@caleb_volkman"], ["content", "Qui accusantium facere debitis. Alias sint aut qui quos vitae sit."], ["created_at", "2016-05-09 20:31:41.388916"], ["updated_at", "2016-05-09 20:31:41.388916"], ["avatar_url", "http://robohash.org/@caleb_volkman.png?size=50x50"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@lenora"], ["content", "Qui placeat quisquam. Temporibus repellat nisi similique veniam."], ["created_at", "2016-05-09 20:31:41.392413"], ["updated_at", "2016-05-09 20:31:41.392413"], ["avatar_url", "http://robohash.org/@lenora.png?size=50x50"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@jayme"], ["content", "Est sunt laboriosam. Et ea quia quis."], ["created_at", "2016-05-09 20:31:41.395619"], ["updated_at", "2016-05-09 20:31:41.395619"], ["avatar_url", "http://robohash.org/@jayme.png?size=50x50"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@bryana_stroman"], ["content", "Officia velit fuga ullam. Enim in blanditiis sit dignissimos quas impedit."], ["created_at", "2016-05-09 20:31:41.398648"], ["updated_at", "2016-05-09 20:31:41.398648"], ["avatar_url", "http://robohash.org/@bryana_stroman.png?size=50x50"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@wilbert_lindgren"], ["content", "Dolorem quod ducimus cupiditate debitis qui voluptas labore. Ut similique accusamus ap"], ["created_at", "2016-05-09 20:31:41.402898"], ["updated_at", "2016-05-09 20:31:41.402898"], ["avatar_url", "http://robohash.org/@wilbert_lindgren.png?size=50x50"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@clare.yost"], ["content", "Sed magni ab voluptates voluptatum. Ratione quo cupiditate voluptatibus est aut."], ["created_at", "2016-05-09 20:31:41.406171"], ["updated_at", "2016-05-09 20:31:41.406171"], ["avatar_url", "http://robohash.org/@clare.yost.png?size=50x50"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@madge"], ["content", "Et architecto excepturi neque. Magni accusamus id veniam ut non sequi harum."], ["created_at", "2016-05-09 20:31:41.409201"], ["updated_at", "2016-05-09 20:31:41.409201"], ["avatar_url", "http://robohash.org/@madge.png?size=50x50"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@nova"], ["content", "Exercitationem dolor ducimus numquam inventore neque et facilis. Temporibus distinctio perferendi"], ["created_at", "2016-05-09 20:31:41.413021"], ["updated_at", "2016-05-09 20:31:41.413021"], ["avatar_url", "http://robohash.org/@nova.png?size=50x50"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@ricardo"], ["content", "Perspiciatis earum deleniti mollitia nihil dolorum ut. Et ipsum vero ut aspernatur doloribus deserunt."], ["created_at", "2016-05-09 20:31:41.417057"], ["updated_at", "2016-05-09 20:31:41.417057"], ["avatar_url", "http://robohash.org/@ricardo.png?size=50x50"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@winston.macgyver"], ["content", "Explicabo sed et repudiandae praesentium. Sequi ut a et ipsam eum."], ["created_at", "2016-05-09 20:31:41.420396"], ["updated_at", "2016-05-09 20:31:41.420396"], ["avatar_url", "http://robohash.org/@winston.macgyver.png?size=50x50"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@sofia"], ["content", "Aut assumenda sunt dolor id. Maiores enim quia sed quod ut."], ["created_at", "2016-05-09 20:31:41.423785"], ["updated_at", "2016-05-09 20:31:41.423785"], ["avatar_url", "http://robohash.org/@sofia.png?size=50x50"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@juston_nikolaus"], ["content", "Expedita vel dolorum fugiat suscipit autem. Dolor est et eos quia."], ["created_at", "2016-05-09 20:31:41.427131"], ["updated_at", "2016-05-09 20:31:41.427131"], ["avatar_url", "http://robohash.org/@juston_nikolaus.png?size=50x50"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@delpha"], ["content", "Distinctio ea id eum inventore consequatur tenetur. Velit dolor necessitatibus assumenda aut dolorem voluptas perspiciatis."], ["created_at", "2016-05-09 20:31:41.430445"], ["updated_at", "2016-05-09 20:31:41.430445"], ["avatar_url", "http://robohash.org/@delpha.png?size=50x50"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@freddie"], ["content", "Porro nisi vel repudiandae nesciunt dolorem iure aut. Quas eveniet tempora rem consequatur."], ["created_at", "2016-05-09 20:31:41.433908"], ["updated_at", "2016-05-09 20:31:41.433908"], ["avatar_url", "http://robohash.org/@freddie.png?size=50x50"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@elnora.bergnaum"], ["content", "Consectetur facere quo dolores velit impedit sint. Unde commodi nisi iusto veniam consequuntur."], ["created_at", "2016-05-09 20:31:41.438149"], ["updated_at", "2016-05-09 20:31:41.438149"], ["avatar_url", "http://robohash.org/@elnora.bergnaum.png?size=50x50"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@michele.koepp"], ["content", "Vel vero quo. Eligendi quod dolores minus."], ["created_at", "2016-05-09 20:31:41.441354"], ["updated_at", "2016-05-09 20:31:41.441354"], ["avatar_url", "http://robohash.org/@michele.koepp.png?size=50x50"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@carleton.konopelski"], ["content", "Facere sed et nemo quos quae. Delectus cupiditate ut amet adipisci dicta."], ["created_at", "2016-05-09 20:31:41.444607"], ["updated_at", "2016-05-09 20:31:41.444607"], ["avatar_url", "http://robohash.org/@carleton.konopelski.png?size=50x50"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@leilani"], ["content", "A eos non sunt molestias. Iste alias ipsum facilis earum illum sit voluptas."], ["created_at", "2016-05-09 20:31:41.447577"], ["updated_at", "2016-05-09 20:31:41.447577"], ["avatar_url", "http://robohash.org/@leilani.png?size=50x50"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@randi"], ["content", "Consequatur consectetur nesciunt. Dicta fugiat doloribus ut molestias."], ["created_at", "2016-05-09 20:31:41.450678"], ["updated_at", "2016-05-09 20:31:41.450678"], ["avatar_url", "http://robohash.org/@randi.png?size=50x50"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@donald"], ["content", "Inventore similique autem. Est in nihil."], ["created_at", "2016-05-09 20:31:41.455107"], ["updated_at", "2016-05-09 20:31:41.455107"], ["avatar_url", "http://robohash.org/@donald.png?size=50x50"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@burdette"], ["content", "Modi dolore assumenda ut impedit fugit porro in. Quis ullam eius porro molestiae."], ["created_at", "2016-05-09 20:31:41.459119"], ["updated_at", "2016-05-09 20:31:41.459119"], ["avatar_url", "http://robohash.org/@burdette.png?size=50x50"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@okey"], ["content", "Quam asperiores inventore non necessitatibus minima veritatis. Distinctio quo nostrum eum ea accusamus."], ["created_at", "2016-05-09 20:31:41.462105"], ["updated_at", "2016-05-09 20:31:41.462105"], ["avatar_url", "http://robohash.org/@okey.png?size=50x50"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@ulises"], ["content", "Tempore unde nisi voluptatem. Maiores dolore similique reiciendis."], ["created_at", "2016-05-09 20:31:41.466333"], ["updated_at", "2016-05-09 20:31:41.466333"], ["avatar_url", "http://robohash.org/@ulises.png?size=50x50"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@ernesto"], ["content", "Reprehenderit blanditiis omnis et est nemo voluptatem nostrum. Error maxime sapiente voluptas."], ["created_at", "2016-05-09 20:31:41.469849"], ["updated_at", "2016-05-09 20:31:41.469849"], ["avatar_url", "http://robohash.org/@ernesto.png?size=50x50"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)  [["username", "@kody"], ["content", "Dolor officiis dolorem qui voluptates sit distinctio veniam. Nulla architecto a amet r"], ["created_at", "2016-05-09 20:31:41.473982"], ["updated_at", "2016-05-09 20:31:41.473982"], ["avatar_url", "http://robohash.org/@kody.png?size=50x50"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("username", "content", "created_at", "updated_at", "avatar_url") VALUES (?, ?, ?, ?, ?)[0m  [["username", "@peyton"], ["content", "Ut hic ut dolorem autem ex assumenda quidem. Velit a aut animi optio deserunt."], ["created_at", "2016-05-09 20:31:41.477699"], ["updated_at", "2016-05-09 20:31:41.477699"], ["avatar_url", "http://robohash.org/@peyton.png?size=50x50"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+
+
+Started GET "/" for ::1 at 2016-05-09 16:31:49 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TweetsController#index as HTML
+  [1m[35mTweet Load (0.6ms)[0m  SELECT "tweets".* FROM "tweets"  ORDER BY created_at DESC
+  Rendered tweets/index.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 4610ms (Views: 4580.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2016-05-09 16:31:54 -0400
+
+
+Started GET "/assets/application-0227545ab36b783d6e509c8e419514fe.css?body=1" for ::1 at 2016-05-09 16:31:54 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2016-05-09 16:31:54 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2016-05-09 16:31:54 -0400
+
+
+Started GET "/assets/tweety-0740dc41eeb2d41c3700fa31b8df5221.gif" for ::1 at 2016-05-09 16:31:54 -0400
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2016-05-09 16:31:54 -0400
+
+
+Started GET "/" for ::1 at 2016-05-09 16:31:58 -0400
+Processing by TweetsController#index as HTML
+  [1m[36mTweet Load (0.9ms)[0m  [1mSELECT "tweets".* FROM "tweets"  ORDER BY created_at DESC[0m
+  Rendered tweets/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 49ms (Views: 47.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application-0227545ab36b783d6e509c8e419514fe.css?body=1" for ::1 at 2016-05-09 16:31:58 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2016-05-09 16:31:58 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2016-05-09 16:31:58 -0400
+
+
+Started GET "/assets/tweety-0740dc41eeb2d41c3700fa31b8df5221.gif" for ::1 at 2016-05-09 16:31:58 -0400
+
+
+Started GET "/assets/application-bc105cf26f847567b5eae624a793b626.js?body=1" for ::1 at 2016-05-09 16:31:58 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2016-05-09 16:31:58 -0400
